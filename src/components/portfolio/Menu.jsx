@@ -1,5 +1,5 @@
 import Work1 from "../../assets/clinica leyde.png";
-import Work2 from "../../assets/work-2.svg";
+import Work2 from "../../assets/convertidor .png";
 import Work3 from "../../assets/work-3.svg";
 import Work4 from "../../assets/work-4.svg";
 import Work5 from "../../assets/work-5.svg";
@@ -19,6 +19,8 @@ const Menu = [
       image: Work2,
       title: "Convertidor de archivos",
       category: "Web App",
+      link: "https://convertidor-pdf-9czm.vercel.app/"
+      
     },
 
   ];
