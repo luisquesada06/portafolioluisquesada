@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+  xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title>Deploy, Hosting &amp; Optimización</title>
+  <desc>Nube con flecha de subida y engrane.</desc>
+
+  <defs>
+    <linearGradient id="acc6" x1="16" y1="16" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10B981"/><stop offset="1" stop-color="#34D399"/>
+    </linearGradient>
+    <filter id="glow6" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/><feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="ds6" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- halo -->
+  <ellipse cx="32" cy="34" rx="17" ry="13" fill="url(#acc6)" opacity=".18" filter="url(#glow6)"/>
+
+  <!-- nube -->
+  <path d="M20 38c-3 0-5-2.2-5-5 0-2.6 2-4.7 4.5-5 1-3.8 4.4-6.5 8.5-6.5 4.9 0 8.9 3.8 9.2 8.6h.3c3.5 0 6.5 2.8 6.5 6.2S41 42 37.5 42H22"
+    fill="white" opacity=".95" filter="url(#ds6)"/>
+
+  <!-- flecha subida -->
+  <path d="M32 28l6 6h-4v8h-4v-8h-4l6-6Z" fill="#0F172A"/>
+
+  <!-- engrane pequeño -->
+  <g transform="translate(42 24)">
+    <circle r="3.2" fill="url(#acc6)" stroke="white" stroke-width="1.5"/>
+    <g stroke="white" stroke-width="1.5" stroke-linecap="round">
+      <path d="M0 -5v2" vector-effect="non-scaling-stroke"/>
+      <path d="M4.33 -2.5l-1 1.7" vector-effect="non-scaling-stroke"/>
+      <path d="M4.33 2.5l-1 -1.7" vector-effect="non-scaling-stroke"/>
+      <path d="M0 5v-2" vector-effect="non-scaling-stroke"/>
+      <path d="M-4.33 2.5l1 -1.7" vector-effect="non-scaling-stroke"/>
+      <path d="M-4.33 -2.5l1 1.7" vector-effect="non-scaling-stroke"/>
+    </g>
+  </g>
+</svg>

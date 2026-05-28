@@ -1,0 +1,38 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+  xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title>Realidad Aumentada &amp; Visión</title>
+  <desc>Marcos de visor, lente y cubo.</desc>
+
+  <defs>
+    <linearGradient id="acc5" x1="16" y1="16" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6366F1"/><stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <filter id="glow5" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="ds5" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <circle cx="32" cy="32" r="15" fill="url(#acc5)" opacity=".18" filter="url(#glow5)"/>
+
+  <!-- viewfinder -->
+  <g stroke="white" stroke-width="2.25" stroke-linecap="round">
+    <path d="M18 24v-4h4" vector-effect="non-scaling-stroke"/>
+    <path d="M46 24v-4h-4" vector-effect="non-scaling-stroke"/>
+    <path d="M18 40v4h4" vector-effect="non-scaling-stroke"/>
+    <path d="M46 40v4h-4" vector-effect="non-scaling-stroke"/>
+  </g>
+
+  <!-- lens -->
+  <circle cx="32" cy="32" r="8" fill="white" opacity=".95" filter="url(#ds5)"/>
+  <circle cx="32" cy="32" r="4.5" fill="#0F172A"/>
+
+  <!-- cube -->
+  <g fill="none" stroke="url(#acc5)" stroke-width="2" stroke-linejoin="round">
+    <path d="M27 25l5-3 5 3-5 3-5-3Z"/>
+    <path d="M27 25v6l5 3 5-3v-6"/>
+  </g>
+</svg>

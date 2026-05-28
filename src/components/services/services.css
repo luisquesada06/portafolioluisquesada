@@ -1,0 +1,47 @@
+.services__container{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  column-gap:1.875rem;
+  row-gap:1.875rem;
+}
+
+.services__card{
+  text-align:left;
+  padding:1.875rem;
+  border-radius:var(--border-radius);
+  background-color:var(--container-color);
+  box-shadow:var(--shadow);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.services__card:hover{transform:translateY(-8px);box-shadow:0 16px 38px rgba(2,6,23,.18)}
+
+.services__img{margin-bottom:1rem;height:64px;width:64px}
+
+.services__title{font-size:var(--h3-font-size);margin-bottom:.5rem;color:#fff}
+.services__description{color:#f8f9fa;margin:0 0 .6rem 0}
+
+.services__meta{font-weight:800;letter-spacing:.2px;margin:.75rem 0 .25rem 0;color:#fff}
+.services__list{margin:0 0 .5rem 0;padding-left:1rem}
+.services__list li{color:#eef2ff;margin:.1rem 0;line-height:1.5}
+.services__stack{color:#e5e7eb;font-weight:600}
+
+/* Colores por tarjeta (1–6) */
+.services__card:nth-child(1){background:rgb(108,108,229);box-shadow:0 8px 24px rgba(108,108,229,.45)}
+.services__card:nth-child(2){background:rgb(249,215,76);box-shadow:0 8px 24px rgba(249,215,76,.45)}
+.services__card:nth-child(3){background:rgb(249,123,139);box-shadow:0 8px 24px rgba(249,123,139,.45)}
+.services__card:nth-child(4){background:rgb(56,189,248);box-shadow:0 8px 24px rgba(56,189,248,.45)}
+.services__card:nth-child(5){background:rgb(99,102,241);box-shadow:0 8px 24px rgba(99,102,241,.45)}
+.services__card:nth-child(6){background:rgb(16,185,129);box-shadow:0 8px 24px rgba(16,185,129,.45)}
+
+/* Mejor contraste para la #2 (amarilla) */
+.services__card:nth-child(2) .services__title{color:var(--title-color)}
+.services__card:nth-child(2) .services__description,
+.services__card:nth-child(2) .services__meta,
+.services__card:nth-child(2) .services__list li,
+.services__card:nth-child(2) .services__stack{color:var(--text-color)}
+
+@media (max-width:1024px){
+  .services__container{grid-template-columns:repeat(2,330px);justify-content:center;row-gap:1.875rem}
+}
+@media (max-width:768px){.services__container{grid-template-columns:310px}}
+@media (max-width:350px){.services__container{grid-template-columns:1fr}}

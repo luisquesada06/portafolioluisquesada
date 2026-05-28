@@ -1,0 +1,31 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+  xmlns="http://www.w3.org/2000/svg">
+  <title>Back-End &amp; APIs</title>
+  <desc>Servidores y brackets API con acento degradado.</desc>
+  <defs>
+    <linearGradient id="acc2" x1="18" y1="18" x2="46" y2="46">
+      <stop stop-color="#60A5FA"/><stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <filter id="glow2" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/><feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="ds2" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="32" cy="34" rx="17" ry="14" fill="url(#acc2)" opacity=".16" filter="url(#glow2)"/>
+
+  <!-- servidores -->
+  <rect x="16" y="18" width="32" height="10" rx="3" fill="white" opacity=".95" filter="url(#ds2)"/>
+  <rect x="16" y="30" width="32" height="10" rx="3" fill="white" opacity=".95" filter="url(#ds2)"/>
+  <circle cx="22" cy="23" r="2" fill="#22C55E"/>
+  <circle cx="22" cy="35" r="2" fill="#F59E0B"/>
+
+  <!-- API brackets -->
+  <path d="M27 44c3 0 4-1.8 4-4s-1-4-4-4M37 36c-3 0-4 1.8-4 4s1 4 4 4"
+    stroke="white" stroke-width="2.25" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+</svg>

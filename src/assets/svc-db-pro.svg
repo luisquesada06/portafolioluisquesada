@@ -1,0 +1,67 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+  xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title>Database &amp; Dashboards</title>
+  <desc>Cilindro de base de datos con anillos, halo y mini panel de métricas.</desc>
+
+  <defs>
+    <!-- Acento editable -->
+    <linearGradient id="dbAcc" x1="16" y1="16" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A78BFA"/><stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+
+    <!-- Brillo sutil -->
+    <filter id="dbGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Sombra de profundidad -->
+    <filter id="dbShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.35"/>
+    </filter>
+
+    <!-- Brillo interior tapa -->
+    <linearGradient id="dbTop" x1="17" y1="16" x2="47" y2="28">
+      <stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#F1F5F9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Halo/acento -->
+  <circle cx="32" cy="30" r="17" fill="url(#dbAcc)" opacity=".18" filter="url(#dbGlow)"/>
+
+  <!-- Tapa superior -->
+  <ellipse cx="32" cy="22" rx="15" ry="6" fill="url(#dbTop)" opacity=".98" filter="url(#dbShadow)"/>
+
+  <!-- Cuerpo -->
+  <path d="M17 22v14c0 4.2 6.7 7.8 15 7.8s15-3.6 15-7.8V22"
+        fill="#FFFFFF" opacity=".98" filter="url(#dbShadow)"/>
+
+  <!-- Anillos -->
+  <path d="M17 28.5c0 3.8 6.7 6.9 15 6.9s15-3.1 15-6.9"
+        stroke="#0F172A" stroke-opacity=".18" stroke-width="2" fill="none"/>
+  <path d="M17 35.5c0 3.8 6.7 6.9 15 6.9s15-3.1 15-6.9"
+        stroke="#0F172A" stroke-opacity=".18" stroke-width="2" fill="none"/>
+
+  <!-- Acento borde superior -->
+  <path d="M17 22c0 3.3 6.7 6 15 6s15-2.7 15-6"
+        stroke="url(#dbAcc)" stroke-width="2" fill="none" opacity=".7"/>
+
+  <!-- Reflejos -->
+  <ellipse cx="26" cy="20.5" rx="4.5" ry="1.4" fill="#FFFFFF" opacity=".35"/>
+  <ellipse cx="40" cy="26.5" rx="3.8" ry="1.1" fill="#FFFFFF" opacity=".22"/>
+
+  <!-- Mini dashboard -->
+  <g transform="translate(39 38)">
+    <rect x="0" y="0" width="13" height="10" rx="2" fill="#FFFFFF" opacity=".9"/>
+    <rect x="2" y="6" width="2" height="3" rx="1" fill="url(#dbAcc)"/>
+    <rect x="5.5" y="4" width="2" height="5" rx="1" fill="url(#dbAcc)"/>
+    <rect x="9" y="2" width="2" height="7" rx="1" fill="url(#dbAcc)"/>
+  </g>
+
+  <!-- Chispas -->
+  <g stroke="url(#dbAcc)" stroke-linecap="round" opacity=".9">
+    <line x1="19" y1="14" x2="19" y2="16" stroke-width="1.6"/>
+    <line x1="14" y1="19" x2="16" y2="19" stroke-width="1.6"/>
+    <line x1="49" y1="17" x2="49" y2="19" stroke-width="1.6"/>
+  </g>
+</svg>

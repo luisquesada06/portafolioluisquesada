@@ -1,0 +1,130 @@
+/* ===== variables suaves para dark/light (heredan de tu theme) ===== */
+:root {
+  --about-bg: rgba(255, 255, 255, 0.06);
+  --about-border: rgba(255, 255, 255, 0.12);
+  --about-text: #dbeafe;
+  --about-muted: #94a3b8;
+  --about-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --about-bg: #ffffff;
+    --about-border: #eef2f7;
+    --about-text: #0f172a;
+    --about-muted: #475569;
+    --about-shadow: 0 10px 30px rgba(2, 6, 23, 0.05);
+  }
+}
+
+/* ===== layout ===== */
+.sw.container.section { scroll-margin-top: 80px; }
+
+.section__title {
+  text-align: left;
+  font-weight: 800;
+  letter-spacing: .3px;
+  margin-bottom: 1.5rem;
+}
+
+/* Panel (mismo look que Databases) */
+.sw__panel{
+  background: var(--about-bg);
+  border: 1px solid var(--about-border);
+  border-radius: 18px;
+  padding: 1.25rem;
+  box-shadow: var(--about-shadow);
+}
+
+/* Grid de badges */
+.sw__grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px 18px;
+}
+
+/* Tarjeta/badge */
+.sw__card{
+  background: var(--about-bg);
+  border: 1px solid var(--about-border);
+  border-radius: 14px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--about-shadow);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.sw__card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.18);
+  border-color: color-mix(in srgb, var(--about-border), #fff 20%);
+}
+.sw__card:focus-visible{
+  outline: 3px solid color-mix(in srgb, var(--about-text), #60a5fa 40%);
+  outline-offset: 2px;
+  border-color: transparent;
+}
+
+.sw__badge{
+  max-width: 100%;
+  height: 36px;            /* altura consistente */
+  object-fit: contain;
+}
+
+@media (max-width: 600px){
+  .sw__badge{ height: 32px; }
+}
+
+/* ===== metric cards (opcional, mismo estilo que AboutBox) ===== */
+.sw__boxes{
+  margin-top: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+@media (max-width: 900px){ .sw__boxes{ grid-template-columns: 1fr; } }
+
+.sw__box{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--about-bg);
+  border: 1px solid var(--about-border);
+  border-radius: 16px;
+  padding: 16px 18px;
+  box-shadow: var(--about-shadow);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.sw__box:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.18);
+  border-color: color-mix(in srgb, var(--about-border), #fff 20%);
+}
+
+.sw__icon{
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  border-radius: 12px;
+  flex: none;
+  font-size: 20px;
+  background: linear-gradient(135deg, #f43f5e, #f59e0b);
+}
+.sw__box:nth-child(2) .sw__icon{ background: linear-gradient(135deg, #22c55e, #0ea5e9); }
+.sw__box:nth-child(3) .sw__icon{ background: linear-gradient(135deg, #a855f7, #6366f1); }
+
+.sw__title{
+  margin: 0;
+  line-height: 1;
+  font-size: 1.75rem;
+  color: var(--about-text);
+}
+.sw__subtitle{
+  display: block;
+  margin-top: 2px;
+  color: var(--about-muted);
+  font-weight: 600;
+  letter-spacing: .2px;
+}

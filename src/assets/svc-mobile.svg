@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+  xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title>Apps móviles</title>
+  <desc>Teléfono con cohete de lanzamiento.</desc>
+
+  <defs>
+    <linearGradient id="acc4" x1="16" y1="16" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#60D6FF"/>
+    </linearGradient>
+
+    <filter id="glow4" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="ds4" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- halo -->
+  <circle cx="32" cy="28" r="15" fill="url(#acc4)" opacity=".18" filter="url(#glow4)"/>
+
+  <!-- teléfono -->
+  <rect x="22" y="14" width="20" height="36" rx="5"
+        fill="white" opacity=".95" filter="url(#ds4)"/>
+  <circle cx="32" cy="44" r="2" fill="#0F172A"/>
+
+  <!-- cohete -->
+  <path d="M32 26c3-3 6-4 9-4-1 3-2 6-4 9l-5 5-4-4 4-6Z"
+        fill="url(#acc4)" stroke="white" stroke-width="2"
+        stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+  <path d="M27 36l-2 4 4-2"
+        stroke="white" stroke-width="2" stroke-linecap="round"
+        vector-effect="non-scaling-stroke"/>
+</svg>
