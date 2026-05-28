@@ -13,9 +13,20 @@
 }
 
 .home__img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
     margin-bottom: 1.5rem;
+    border: 6px solid #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
 }
 
+.home__img:hover{
+    transform: scale(1.05);
+}
 .home__name {
     font-size: var(--h1-font-size);
     font-weight: var(--font-bold);

@@ -6,34 +6,46 @@ import About from './components/about/About';
 import Services from './components/services/Services';
 import Resume from './components/resume/Resume';
 import Portfolio from './components/portfolio/Portfolio';
-import Pricing from './components/pricing/Pricing';
-import Testimonials from './components/testimonials/Testimonials';
+
+// import Pricing from './components/pricing/Pricing';
+// import Testimonials from './components/testimonials/Testimonials';
+
 import Contact from './components/contact/Contact';
-import Blog from './components/blog/Blog';
+
+// import Blog from './components/blog/Blog';
+
 import Data from './components/databases/Databases';
 import Frame from './components/frameworks/Frame';
 import Software from './components/software/Software';
+
 const App = () => {
   return (
     <>
-    <Sidebar />
+      <Sidebar />
 
-    <main className="main">
-      <Home />
-      <About />
-      <Data />
-      <Frame />
-      <Software />
-      <Services />
-      <Resume />
-      <Portfolio />
-      <Pricing />
-      <Testimonials />
-      <Blog />
-      <Contact />
-    </main>
+      <main className="main">
+        <Home />
+        <About />
+        <Data />
+        <Frame />
+        <Software />
+        <Services />
+        <Resume />
+        <Portfolio />
+
+        {/* <Pricing /> */}
+        {/* Pricing Plans */}
+
+        {/* <Testimonials /> */}
+        {/* Clients & Reviews */}
+
+        {/* <Blog /> */}
+        {/* Latest Blog Posts */}
+
+        <Contact />
+      </main>
     </>
   )
-} 
+}
 
-export default App
+export default App;

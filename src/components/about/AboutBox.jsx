@@ -23,7 +23,7 @@ const Counter = ({ end = 0, duration = 1200 }) => {
         }
       },
       { threshold: 0.4 }
-    );
+    ); 
 
     if (el) io.observe(el);
     return () => io.disconnect();

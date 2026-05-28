@@ -1,6 +1,6 @@
 import React from "react";
 import "./about.css";
-import Image from "../../assets/avatar-2.svg";
+import Image from "../../assets/luis quesada.jpeg";
 import AboutBox from "./AboutBox";
 
 /* Barra reutilizable */
@@ -59,9 +59,9 @@ const About = () => {
               Atlántida, Honduras. Tengo experiencia en el desarrollo de páginas
               web y aplicaciones móviles basada en mis estudios universitarios.
             </p>
-
+ 
             <a
-              href="/luis_cv.pdf"
+              href="/Luis_Quesada_CV.pdf"
               download="CV_Luis_Quesada.pdf"
               className="btn btn--primary"
             >
