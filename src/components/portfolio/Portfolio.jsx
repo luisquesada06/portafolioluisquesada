@@ -7,8 +7,9 @@ const Portfolio = () => {
   const [items, setItems] = useState(Menu);
 
   const filterItem = (categoryItem) => {
+
     const updateItem = Menu.filter((curElem) => {
-      return curElem.category === categoryItem;
+      return curElem.category.includes(categoryItem);
     });
 
     setItems(updateItem);
@@ -35,7 +36,19 @@ const Portfolio = () => {
           Web App
         </span>
 
+        <span
+          className="work__item"
+          onClick={() => filterItem("React")}
+        >
+          React
+        </span>
 
+        <span
+          className="work__item"
+          onClick={() => filterItem("Python")}
+        >
+          Python
+        </span>
 
       </div>
 
@@ -62,7 +75,7 @@ const Portfolio = () => {
               </div>
 
               <span className="work__category">
-                {category}
+                {category.join(" • ")}
               </span>
 
               <h3 className="work__title">
